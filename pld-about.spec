@@ -17,7 +17,6 @@ Requires:	XFree86-fonts-75dpi-ISO8859-2
 Requires:	fonts-Type1-ulT1mo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Little program similar to gnome-about. It displays a list of the PLD
 developers and other people that support distribution development.
@@ -32,10 +31,10 @@ osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 %patch0 -p1
 
 %build
+%{__gettextize}
 %{__aclocal} -I macros
 %{__autoconf}
 %{__autoheader}
-%{__gettextize}
 %{__automake}
 %configure
 mv po/pl/pld-about.po po/pl.po
