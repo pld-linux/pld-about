@@ -17,7 +17,6 @@ Requires:	XFree86-fonts-75dpi-ISO8859-2
 Requires:	fonts-Type1-ulT1mo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Little program similar to gnome-about. It displays a list of the PLD
