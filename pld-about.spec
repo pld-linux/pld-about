@@ -2,14 +2,15 @@ Summary:	PLD-About
 Summary(pl):	PLD-About
 Name:		pld-about
 Version:	0.1.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld.org.pl>
 Source0:	PLD-About-%{version}.tar.gz
 Source1:	%{name}.png
-#Patch0:		%{name}.patch
+Patch0:		%{name}-po.patch
 URL:		http://www.pld.org.pl/
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel < 2.0
 BuildRequires:	gtk+-devel < 2.0
 Requires:	XFree86-fonts-75dpi-ISO8859-2
@@ -29,27 +30,28 @@ osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 
 %prep
 %setup -q -n PLD-About-%{version}
-#%patch -p1
+%patch0 -p1
 
 %build
-./autogen.sh
+%{__aclocal} -I macros
+%{__autoconf}
+%{__autoheader}
+%{__gettextize}
+%{__automake}
 %configure
-
+mv po/pl/pld-about.po po/pl.po
 %{__make}
-#rm -f po/pl/*.mo
-#msgfmt -o po/%{name}.mo po/%{name}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir},%{_datadir}/pld-about}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}
+install lista.dat $RPM_BUILD_ROOT%{_datadir}/pld-about
 install pld-about.desktop $RPM_BUILD_ROOT%{_applnkdir}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
-install -d $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
-install po/pl/%{name}.mo $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
-install -d $RPM_BUILD_ROOT%{_datadir}/pld-about/
-install lista.dat $RPM_BUILD_ROOT%{_datadir}/pld-about/
+install pld-about.png $RPM_BUILD_ROOT%{_pixmapsdir}
+install src/pld_logo2.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/pld-about
+install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}/pld-about2.png
 
 %find_lang %{name}
 
@@ -60,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/pixmaps/pld-about/pld_logo.xpm
-%{_datadir}/pld-about/*
+%{_datadir}/pld-about
 %{_applnkdir}/*.desktop
-%{_pixmapsdir}/*.png
+%{_pixmapsdir}/*
