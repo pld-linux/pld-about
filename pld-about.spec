@@ -1,13 +1,14 @@
 Summary:	PLD-About
 Summary(pl):	PLD-About
 Name:		pld-about
-Version:	0.1.4
-Release:	3
+Version:	0.1.5
+%define		pldabout_snap	20040408
+Release:	0.%{pldabout_snap}
 License:	GPL
 Group:		X11/Applications
 Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld-linux.org>
-Source0:	PLD-About-%{version}.tar.gz
-# Source0-md5: 6502dc5042f36e928456d720956384f3
+Source0:	PLD-About-%{version}-%{pldabout_snap}.tar.bz2
+# Source0-md5:	af875155f8ded4d77bafa73045ad4127
 Source1:	%{name}.png
 Patch0:		%{name}-po.patch
 Patch1:		%{name}-gettextize.patch
@@ -30,7 +31,7 @@ Ma³y programik podobny do gnome-about, zawieraj±cy listê developerów i
 osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 
 %prep
-%setup -q -n PLD-About-%{version}
+%setup -q -n PLD-About-%{version}-%{pldabout_snap}
 %patch0 -p1
 %patch1 -p1
 
