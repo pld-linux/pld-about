@@ -5,7 +5,7 @@ Version:	0.1.4
 Release:	3
 License:	GPL
 Group:		X11/Applications
-Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld.org.pl>
+Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld-linux.org>
 Source0:	PLD-About-%{version}.tar.gz
 # Source0-md5: 6502dc5042f36e928456d720956384f3
 Source1:	%{name}.png
