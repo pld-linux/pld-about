@@ -2,13 +2,13 @@ Summary:	PLD-About
 Summary(pl):	PLD-About
 Name:		pld-about
 Version:	0.1.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld.org.pl>
 Source0:	PLD-About-%{version}.tar.gz
 Source1:	%{name}.png
-Patch0:		%{name}.patch
+#Patch0:		%{name}.patch
 URL:		http://www.pld.org.pl/
 BuildRequires:	gnome-libs-devel < 2.0
 BuildRequires:	gtk+-devel < 2.0
@@ -29,15 +29,15 @@ osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 
 %prep
 %setup -q -n PLD-About-%{version}
-%patch -p1
+#%patch -p1
 
 %build
 ./autogen.sh
 %configure
 
 %{__make}
-rm -f po/pl/*.mo
-msgfmt -o po/%{name}.mo po/%{name}.po
+#rm -f po/pl/*.mo
+#msgfmt -o po/%{name}.mo po/%{name}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -47,7 +47,9 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}
 install pld-about.desktop $RPM_BUILD_ROOT%{_applnkdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 install -d $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
-install po/%{name}.mo $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
+install po/pl/%{name}.mo $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES
+install -d $RPM_BUILD_ROOT%{_datadir}/pld-about/
+install lista.dat $RPM_BUILD_ROOT%{_datadir}/pld-about/
 
 %find_lang %{name}
 
@@ -59,5 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/pixmaps/pld-about/pld_logo.xpm
+%{_datadir}/pld-about/*
 %{_applnkdir}/*.desktop
 %{_pixmapsdir}/*.png
