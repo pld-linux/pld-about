@@ -1,0 +1,271 @@
+--- PLD-About-0.1.4/po/pl/pld-about.po.orig	Sat Oct 26 13:52:53 2002
++++ PLD-About-0.1.4/po/pl/pld-about.po	Mon Nov 18 01:21:00 2002
+@@ -54,14 +54,14 @@
+ msgid "Jaroslaw <jack> Kamper"
+ msgstr "Jaros³aw <jack> Kamper"
+ 
+-msgid "Rafa³ <klakier> Kleger-Rudomin"
+-msgstr "Rafal <klakier> Kleger-Rudomin"
++msgid "Rafal <klakier> Kleger-Rudomin"
++msgstr "Rafa³ <klakier> Kleger-Rudomin"
+ 
+-msgid "Tomasz <kloczek> K³oczko"
+-msgstr "Tomasz <kloczek> Kloczko"
++msgid "Tomasz <kloczek> Kloczko"
++msgstr "Tomasz <kloczek> K³oczko"
+ 
+-msgid "Przemyslaw Stanislaw Knycz"
+-msgstr "Przemys³aw Stanis³aw Knycz"
++msgid "Przemyslaw Stanislaw <djrzulf> Knycz"
++msgstr "Przemys³aw Stanis³aw <djrzulf> Knycz"
+ 
+ msgid "Michal <mkochano> Kochanowicz"
+ msgstr "Micha³ <mkochano> Kochanowicz"
+@@ -69,8 +69,11 @@
+ msgid "Pawel <pawelk> Kolodziej"
+ msgstr "Pawe³ <pawelk> Ko³odziej"
+ 
+-msgid "Witold <adasi> Krêcicki"
+-msgstr "Witold <adasi> Krecicki"
++msgid "Witold <adasi> Krecicki"
++msgstr "Witold <adasi> Krêcicki"
++
++msgid "Andrzej Michal <ankry> Krzysztofowicz"
++msgstr "Andrzej Micha³ <ankry> Krzysztofowicz"
+ 
+ msgid "Michal <kura> Kuratczyk"
+ msgstr "Micha³ <kura> Kuratczyk"
+@@ -84,14 +87,14 @@
+ msgid "Michal <malekith> Moskal"
+ msgstr "Micha³ <malekith> Moskal"
+ 
+-msgid "Lukasz Jaroslaw Mozer"
+-msgstr "£ukasz Jaros³aw Mozer"
++msgid "Lukasz Jaroslaw <baseciq> Mozer"
++msgstr "£ukasz Jaros³aw <baseciq> Mozer"
+ 
+-msgid "Sergiusz <serek> Paw³owicz"
+-msgstr "Sergiusz <serek> Pawlowicz"
++msgid "Sergiusz <serek> Pawlowicz"
++msgstr "Sergiusz <serek> Paw³owicz"
+ 
+-msgid "Jan <baggins> Rêkorajski"
+-msgstr "Jan <baggins> Rekorajski"
++msgid "Jan <baggins> Rekorajski"
++msgstr "Jan <baggins> Rêkorajski"
+ 
+ msgid "Pawel <saq> Sakowski"
+ msgstr "Pawe³ <saq> Sakowski"
+@@ -99,11 +102,11 @@
+ msgid "Wojciech <wojtek> Slusarczyk"
+ msgstr "Wojciech <wojtek> ¦lusarczyk"
+ 
+-msgid "Lukasz <lukasz> Trabiñski"
++msgid "Lukasz <lukasz> Trabinski"
+ msgstr "£ukasz <lukasz> Tr±biñski"
+ 
+-msgid "Robert Jakub Wozny"
+-msgstr "Robert Jakub Wo¼ny"
++msgid "Robert Jakub <speedy> Wozny"
++msgstr "Robert Jakub <speedy> Wo¼ny"
+ 
+ msgid "Artur <wrobell> Wroblewski"
+ msgstr "Artur <wrobell> Wróblewski"
+@@ -115,7 +118,7 @@
+ msgstr "Pytania ?"
+ 
+ msgid "Any suggestions ?"
+-msgstr "Sugestje ?"
++msgstr "Sugestie ?"
+ 
+ msgid "Write mail to:"
+ msgstr "Napisz maila do:"
+--- PLD-About-0.1.4/po/pld-about.po.orig	Mon Nov 18 01:02:54 2002
++++ PLD-About-0.1.4/po/pld-about.po	Mon Nov 18 01:18:37 2002
+@@ -1,7 +1,7 @@
+ # translation of PLD-About.
+ # Copyright (C) 2002 by Mariusz 'Ma-rYu-sH' Witkowski
+ # 
+-# 
++#, fuzzy
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: PLD-About 0.1.4\n"
+@@ -48,14 +48,14 @@
+ msgid "Jaroslaw <jack> Kamper"
+ msgstr "Jaros³aw <jack> Kamper"
+ 
+-msgid "Rafa³ <klakier> Kleger-Rudomin"
+-msgstr "Rafal <klakier> Kleger-Rudomin"
++msgid "Rafal <klakier> Kleger-Rudomin"
++msgstr "Rafa³ <klakier> Kleger-Rudomin"
+ 
+-msgid "Tomasz <kloczek> K³oczko"
+-msgstr "Tomasz <kloczek> Kloczko"
++msgid "Tomasz <kloczek> Kloczko"
++msgstr "Tomasz <kloczek> K³oczko"
+ 
+-msgid "Przemyslaw Stanislaw Knycz"
+-msgstr "Przemys³aw Stanis³aw Knycz"
++msgid "Przemyslaw Stanislaw <djrzulf> Knycz"
++msgstr "Przemys³aw Stanis³aw <djrzulf> Knycz"
+ 
+ msgid "Michal <mkochano> Kochanowicz"
+ msgstr "Micha³ <mkochano> Kochanowicz"
+@@ -63,8 +63,11 @@
+ msgid "Pawel <pawelk> Kolodziej"
+ msgstr "Pawe³ <pawelk> Ko³odziej"
+ 
+-msgid "Witold <adasi> Krêcicki"
+-msgstr "Witold <adasi> Krecicki"
++msgid "Witold <adasi> Krecicki"
++msgstr "Witold <adasi> Krêcicki"
++
++msgid "Andrzej Michal <ankry> Krzysztofowicz"
++msgstr "Andrzej Micha³ <ankry> Krzysztofowicz"
+ 
+ msgid "Michal <kura> Kuratczyk"
+ msgstr "Micha³ <kura> Kuratczyk"
+@@ -78,14 +81,14 @@
+ msgid "Michal <malekith> Moskal"
+ msgstr "Micha³ <malekith> Moskal"
+ 
+-msgid "Lukasz Jaroslaw Mozer"
+-msgstr "£ukasz Jaros³aw Mozer"
++msgid "Lukasz Jaroslaw <baseciq> Mozer"
++msgstr "£ukasz Jaros³aw <baseciq> Mozer"
+ 
+-msgid "Sergiusz <serek> Paw³owicz"
+-msgstr "Sergiusz <serek> Pawlowicz"
++msgid "Sergiusz <serek> Pawlowicz"
++msgstr "Sergiusz <serek> Paw³owicz"
+ 
+-msgid "Jan <baggins> Rêkorajski"
+-msgstr "Jan <baggins> Rekorajski"
++msgid "Jan <baggins> Rekorajski"
++msgstr "Jan <baggins> Rêkorajski"
+ 
+ msgid "Pawel <saq> Sakowski"
+ msgstr "Pawe³ <saq> Sakowski"
+@@ -93,11 +96,11 @@
+ msgid "Wojciech <wojtek> Slusarczyk"
+ msgstr "Wojciech <wojtek> ¦lusarczyk"
+ 
+-msgid "Lukasz <lukasz> Trabiñski"
++msgid "Lukasz <lukasz> Trabinski"
+ msgstr "£ukasz <lukasz> Tr±biñski"
+ 
+-msgid "Robert Jakub Wozny"
+-msgstr "Robert Jakub Wo¼ny
++msgid "Robert Jakub <speedy> Wozny"
++msgstr "Robert Jakub <speedy> Wo¼ny"
+ 
+ msgid "Artur <wrobell> Wroblewski"
+ msgstr "Artur <wrobell> Wróblewski"
+@@ -109,7 +112,7 @@
+ msgstr "Pytania ?"
+ 
+ msgid "Any suggestions ?"
+-msgstr "Sugestje ?"
++msgstr "Sugestie ?"
+ 
+ msgid "Write mail to:"
+ msgstr "Napisz maila do:"
+--- PLD-About-0.1.4/src/lista.h.orig	Mon Nov 18 01:09:09 2002
++++ PLD-About-0.1.4/src/lista.h	Mon Nov 18 01:09:09 2002
+@@ -15,24 +15,24 @@
+     "Pawel <blues> Golaszewski",
+     "Grzegorz <grzegol> Golawski",
+     "Filip <filon> Kalinski",
++    "Marzena <skobelek> Kamecka",
+     "Jaroslaw <jack> Kamper",
+     "Rafal <klakier> Kleger-Rudomin",
+-    "Marzena <skobelek> Kamecka",
+     "Tomasz <kloczek> Kloczko",
+-    "Przemyslaw Stanislaw Knycz",
++    "Przemyslaw Stanislaw <djrzulf> Knycz",
+     "Michal <mkochano> Kochanowicz",
+     "Pawel <pawelk> Kolodziej",
+     "Jacek <jajcus> Konieczny",
+     "Marcin <qrczak> Kowalczyk",
+     "Witold <adasi> Krecicki",
+-    "Andrzej <ankry> Krzysztofowicz",
++    "Andrzej Michal <ankry> Krzysztofowicz",
+     "Michal <kura> Kuratczyk",
+     "Hubert <depesz> Lubaczewski",
+     "Michal <alchemyx> Margula",
+     "Mariusz <mmazur> Mazur",
+     "Arkadiusz <misiek> Miskiewicz",
+     "Michal <malekith> Moskal",
+-    "lukasz Jaroslaw Mozer",
++    "Lukasz Jaroslaw <baseciq> Mozer",
+     "Tomasz <orzech> Orzechowski",
+     "Tomasz <gotar> Pala",
+     "Arkadiusz <areq> Patyk",
+@@ -46,13 +46,13 @@
+     "Wojciech <wojtek> Slusarczyk",
+     "Krzysztof <dzimi> Taraszka",
+     "Bartosz <wolf> Taudul",
+-    "lukasz <lukasz> Trabinski",
++    "Lukasz <lukasz> Trabinski",
+     "Tomasz <trojan> Trojanowski",
+     "Robert <rrw> Wal",
+     "Tomasz <tiwek> Witek",
+     "Mariusz <Ma-rYu-sH> Witkowski",
+     "Marcin <fastviper> Wojtczuk",
+-    "Robert Jakub Wozny",
++    "Robert Jakub <speedy> Wozny",
+     "Artur <wrobell> Wroblewski",
+     "Sebastian <zagrodzki> Zagrodzki",
+     "Michal <michuz> Zawalich",
+--- PLD-About-0.1.4/src/interface.c~	Mon Nov 18 01:37:06 2002
++++ PLD-About-0.1.4/src/interface.c	Mon Nov 18 01:39:29 2002
+@@ -37,7 +37,7 @@
+ 
+   window1 = gtk_window_new (GTK_WINDOW_DIALOG);
+   gtk_object_set_data (GTK_OBJECT (window1), "window1", window1);
+-  gtk_widget_set_usize (window1, 390, 340);
++  gtk_widget_set_usize (window1, 410, 340);
+   gtk_window_set_title (GTK_WINDOW (window1), _("PLD About"));
+   gtk_window_set_position (GTK_WINDOW (window1), GTK_WIN_POS_CENTER);
+   gtk_window_set_modal (GTK_WINDOW (window1), TRUE);
+@@ -56,8 +56,8 @@
+   gtk_object_set_data_full (GTK_OBJECT (window1), "quit", quit,
+                             (GtkDestroyNotify) gtk_widget_unref);
+   gtk_widget_show (quit);
+-  gtk_fixed_put (GTK_FIXED (fixed1), quit, 165, 312);
+-  gtk_widget_set_uposition (quit, 165, 312);
++  gtk_fixed_put (GTK_FIXED (fixed1), quit, 175, 312);
++  gtk_widget_set_uposition (quit, 175, 312);
+   gtk_widget_set_usize (quit, 60, 22);
+   gtk_container_set_border_width (GTK_CONTAINER (quit), 1);
+   gtk_widget_add_accelerator (quit, "clicked", accel_group,
+@@ -77,7 +77,7 @@
+   gtk_widget_show (alignment1);
+   gtk_fixed_put (GTK_FIXED (fixed1), alignment1, 8, 8);
+   gtk_widget_set_uposition (alignment1, 8, 8);
+-  gtk_widget_set_usize (alignment1, 374, 280);
++  gtk_widget_set_usize (alignment1, 400, 280);
+ 
+   hbox1 = gtk_hbox_new (FALSE, 0);
+   gtk_widget_ref (hbox1);
+@@ -110,7 +110,7 @@
+                             (GtkDestroyNotify) gtk_widget_unref);
+   gtk_widget_show (obszar_rys);
+   gtk_container_add (GTK_CONTAINER (viewport1), obszar_rys);
+-  gtk_widget_set_usize (obszar_rys, 190, -2);
++  gtk_widget_set_usize (obszar_rys, 210, -2);
+ 
+   pixmap1 = create_pixmap (window1, "pld-about/pld_logo.xpm", FALSE);
+   gtk_widget_ref (pixmap1);
+@@ -134,8 +134,8 @@
+   gtk_object_set_data_full (GTK_OBJECT (window1), "href2", href2,
+                             (GtkDestroyNotify) gtk_widget_unref);
+   gtk_widget_show (href2);
+-  gtk_fixed_put (GTK_FIXED (fixed1), href2, 205, 288);
+-  gtk_widget_set_uposition (href2, 205, 288);
++  gtk_fixed_put (GTK_FIXED (fixed1), href2, 225, 288);
++  gtk_widget_set_uposition (href2, 225, 288);
+   gtk_widget_set_usize (href2, 146, 22);
+ 
+   gtk_signal_connect (GTK_OBJECT (window1), "destroy",
