@@ -15,8 +15,7 @@ URL:		http://www.pld-linux.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-libs-devel < 2.0
-BuildRequires:	gtk+-devel < 2.0
+BuildRequires:	gnome-libs-devel >= 1.4.0
 Requires:	XFree86-fonts-75dpi-ISO8859-2
 Requires:	fonts-Type1-ulT1mo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,6 +34,10 @@ osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 %patch0 -p1
 %patch1 -p1
 
+echo 'Categories=System;X-Help;' >> pld-about.desktop
+
+mv -f po/pld-about.po po/pl.po
+
 %build
 %{__gettextize}
 %{__aclocal} -I m4 -I macros
@@ -42,18 +45,17 @@ osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 %{__autoheader}
 %{__automake}
 %configure
-mv po/pld-about.po po/pl.po
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir},%{_datadir}/pld-about}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_datadir}/pld-about}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install lista.dat $RPM_BUILD_ROOT%{_datadir}/pld-about
-install pld-about.desktop $RPM_BUILD_ROOT%{_applnkdir}
+install pld-about.desktop $RPM_BUILD_ROOT%{_desktopdir}
 install pld-about.png $RPM_BUILD_ROOT%{_pixmapsdir}
 install src/pld_logo2.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/pld-about
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}/pld-about2.png
@@ -68,5 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/pld-about
-%{_applnkdir}/*.desktop
-%{_pixmapsdir}/*
+%{_desktopdir}/*.desktop
+%{_pixmapsdir}/*.png
+%{_pixmapsdir}/pld-about
