@@ -7,10 +7,11 @@ License:	GPL
 Group:		X11/Applications
 Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld-linux.org>
 Source0:	PLD-About-%{version}.tar.gz
-# Source0-md5: 6502dc5042f36e928456d720956384f3
+# Source0-md5:	6502dc5042f36e928456d720956384f3
 Source1:	%{name}.png
 Patch0:		%{name}-po.patch
-Patch1:		%{name}-gettextize.patch
+#Patch1:		%{name}-gettextize.patch
+Patch2:		%{name}-domain.patch
 URL:		http://www.pld-linux.org/
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel < 2.0
@@ -18,6 +19,8 @@ BuildRequires:	gtk+-devel < 2.0
 Requires:	XFree86-fonts-75dpi-ISO8859-2
 Requires:	fonts-Type1-ulT1mo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_prefix		/usr/X11R6
 
 %description
 Little program similar to gnome-about. It displays a list of the PLD
@@ -31,11 +34,12 @@ osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 %prep
 %setup -q -n PLD-About-%{version}
 %patch0 -p1
-%patch1 -p1
+#%%patch1 -p1
+%patch2 -p1
 
 %build
 %{__gettextize}
-%{__aclocal} -I m4 -I macros
+%{__aclocal} -I macros
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -45,7 +49,7 @@ mv po/pld-about.po po/pl.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir},%{_datadir}/pld-about}
+install -d $RPM_BUILD_ROOT{%{_applnkdir},%{_datadir}/pld-about,%{_pixmapsdir}/pld-about}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 install lista.dat $RPM_BUILD_ROOT%{_datadir}/pld-about
