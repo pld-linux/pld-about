@@ -9,6 +9,7 @@ Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld.org.pl>
 Source0:	PLD-About-%{version}.tar.gz
 Source1:	%{name}.png
 Patch0:		%{name}-po.patch
+Patch1:		%{name}-gettextize.patch
 URL:		http://www.pld.org.pl/
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel < 2.0
@@ -29,15 +30,16 @@ osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
 %prep
 %setup -q -n PLD-About-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__gettextize}
-%{__aclocal} -I macros
+%{__aclocal} -I m4 -I macros
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure
-mv po/pl/pld-about.po po/pl.po
+mv po/pld-about.po po/pl.po
 %{__make}
 
 %install
