@@ -12,6 +12,8 @@ Source1:	%{name}.png
 Patch0:		%{name}-po.patch
 Patch1:		%{name}-gettextize.patch
 URL:		http://www.pld-linux.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel < 2.0
 BuildRequires:	gtk+-devel < 2.0
@@ -47,7 +49,9 @@ mv po/pld-about.po po/pl.po
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_applnkdir},%{_datadir}/pld-about}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 install lista.dat $RPM_BUILD_ROOT%{_datadir}/pld-about
 install pld-about.desktop $RPM_BUILD_ROOT%{_applnkdir}
 install pld-about.png $RPM_BUILD_ROOT%{_pixmapsdir}
