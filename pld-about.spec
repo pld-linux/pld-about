@@ -11,7 +11,7 @@ Source0:	PLD-About-%{version}.tar.gz
 Source1:	%{name}.png
 Patch0:		%{name}-po.patch
 Patch1:		%{name}-gettextize.patch
-URL:		http://www.pld.org.pl/
+URL:		http://www.pld-linux.org/
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel < 2.0
 BuildRequires:	gtk+-devel < 2.0
