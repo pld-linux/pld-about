@@ -1,0 +1,11 @@
+diff -urN PLD-About-0.1.4.orig/configure.in PLD-About-0.1.4/configure.in
+--- PLD-About-0.1.4.orig/configure.in	Thu Sep 19 13:24:30 2002
++++ PLD-About-0.1.4/configure.in	Fri Jan 24 12:07:08 2003
+@@ -31,7 +31,5 @@
+ Makefile
+ macros/Makefile
+ src/Makefile
+-intl/Makefile
+-po/Makefile.in
+ ])
+ 
