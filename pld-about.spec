@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications
 Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld.org.pl>
 Source0:	PLD-About-%{version}.tar.gz
+# Source0-md5: 6502dc5042f36e928456d720956384f3
 Source1:	%{name}.png
 Patch0:		%{name}-po.patch
 Patch1:		%{name}-gettextize.patch
