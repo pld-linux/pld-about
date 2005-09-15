@@ -1,65 +1,53 @@
-Summary:	PLD-About
-Summary(pl):	PLD-About
+%include	/usr/lib/rpm/macros.mono
+Summary:	PLD About
+Summary(pl):	O PLD
 Name:		pld-about
-Version:	0.1.5
-%define		pldabout_snap	20040408
-Release:	0.%{pldabout_snap}
-License:	GPL
+Version:	1.0.0
+Release:	1
+License:	GPL v2
 Group:		X11/Applications
-Vendor:		Mariusz 'Ma-rYu-sH' Witkowski <maryush@pld-linux.org>
-Source0:	PLD-About-%{version}-%{pldabout_snap}.tar.bz2
-# Source0-md5:	af875155f8ded4d77bafa73045ad4127
-Source1:	%{name}.png
-Patch0:		%{name}-po.patch
-Patch1:		%{name}-gettextize.patch
+Source0:	http://team.pld-linux.org/~wolf/%{name}-%{version}.tar.bz2
+# Source0-md5:	d9d5cd6dcbe42def0e5b80f9f34e6454
 URL:		http://www.pld-linux.org/
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	dotnet-gtk-sharp2-devel >= 2.5.91
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-libs-devel >= 1.4.0
-Requires:	XFree86-fonts-75dpi-ISO8859-2
-Requires:	fonts-Type1-ulT1mo
+BuildRequires:	mono-csharp >= 1.1.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Little program similar to gnome-about. It displays a list of the PLD
-developers and other people that support distribution development.
-This package contains GNOME version.
+Little program showing information about PLD developers.
 
 %description -l pl
-Ma³y programik podobny do gnome-about, zawieraj±cy listê developerów i
-osób wspó³pracuj±cych przy tworzeniu dystrybucji PLD. Wersja GNOME.
+Ma³y program wy¶wietlaj±cy informacje o twórcach PLD.
 
 %prep
-%setup -q -n PLD-About-%{version}-%{pldabout_snap}
-%patch0 -p1
-%patch1 -p1
-
-echo 'Categories=System;X-Help;' >> pld-about.desktop
-
-mv -f po/pld-about.po po/pl.po
+%setup -q
 
 %build
-%{__gettextize}
-%{__aclocal} -I m4 -I macros
-%{__autoconf}
-%{__autoheader}
-%{__automake}
-%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_datadir}/pld-about}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_pixmapsdir},%{_desktopdir},%{_libdir}/pld-about/backgrounds}
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+install gdk-cairo.dll pld-about.exe front.png bociek.png \
+		$RPM_BUILD_ROOT%{_libdir}/pld-about
+install backgrounds/* $RPM_BUILD_ROOT%{_libdir}/pld-about/backgrounds
 
-install lista.dat $RPM_BUILD_ROOT%{_datadir}/pld-about
-install pld-about.desktop $RPM_BUILD_ROOT%{_desktopdir}
-install pld-about.png $RPM_BUILD_ROOT%{_pixmapsdir}
-install src/pld_logo2.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/pld-about
-install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}/pld-about2.png
+install pld-about.desktop	$RPM_BUILD_ROOT%{_desktopdir}
+install resources/icon64.png	$RPM_BUILD_ROOT%{_pixmapsdir}/pld-about.png
+
+for i in locale/*.mo
+do
+	install -d $RPM_BUILD_ROOT%{_datadir}/locale/`basename $i .mo`/LC_MESSAGES
+	install $i $RPM_BUILD_ROOT%{_datadir}/locale/`basename $i .mo`/LC_MESSAGES/pld-about.mo
+done
+
+cat > $RPM_BUILD_ROOT%{_bindir}/pld-about << EOF
+#!/bin/sh
+cd %{_libdir}/pld-about
+exec /usr/bin/mono %{_libdir}/pld-about/pld-about.exe "\$@"
+EOF
 
 %find_lang %{name}
 
@@ -68,9 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS
+%doc docs/{ChangeLog,copyrights,kryteria,skrypty}
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/pld-about
+%{_libdir}/pld-about
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*.png
-%{_pixmapsdir}/pld-about
