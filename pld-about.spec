@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	PLD About
-Summary(pl):	O PLD
+Summary(pl.UTF-8):   O PLD
 Name:		pld-about
 Version:	1.1.0
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Little program showing information about PLD developers.
 
-%description -l pl
-Ma≥y program wy∂wietlaj±cy informacje o twÛrcach PLD.
+%description -l pl.UTF-8
+Ma≈Çy program wy≈õwietlajƒÖcy informacje o tw√≥rcach PLD.
 
 %prep
 %setup -q
