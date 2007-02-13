@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	PLD About
-Summary(pl.UTF-8):   O PLD
+Summary(pl.UTF-8):	O PLD
 Name:		pld-about
 Version:	1.1.0
 Release:	1
