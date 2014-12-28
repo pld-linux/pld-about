@@ -10,7 +10,7 @@ Source0:	http://team.pld-linux.org/~wolf/%{name}-%{version}.tar.bz2
 # Source0-md5:	5083818072f8bc2e460e97de61549384
 URL:		http://www.pld-linux.org/
 BuildRequires:	dotnet-gtk-sharp2-devel >= 2.5.91-2
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	mono-csharp >= 1.1.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
